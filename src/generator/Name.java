@@ -3,16 +3,17 @@ package generator;
 public class Name {
 	private String firstName;
 	private String lastName;
-	private boolean complexFirstName;
 	private String language;
 	private boolean male;
 
-	public Name(String firstName, String lastName, boolean complexFirstName, String language, boolean male) {
+	public Name(String firstName, String lastName, String language, boolean male) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.complexFirstName = complexFirstName;
 		this.language = language;
 		this.male = male;
+
+		firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();
+		lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1).toLowerCase();
 	}
 
 	public String getFirstName() {
@@ -23,8 +24,13 @@ public class Name {
 		return lastName;
 	}
 
+	public String getCompleteName() {
+		return firstName + "" + lastName;
+	}
+
 	public boolean hasComplexFirstName() {
-		return complexFirstName;
+		String[] split = firstName.split(" ");
+		return split.length>1;
 	}
 
 	public String getLanguage() {
@@ -33,5 +39,21 @@ public class Name {
 
 	public boolean isMale() {
 		return male;
+	}
+
+	@Override
+	public String toString() {
+		return getCompleteName();
+	}
+	@Override
+	public boolean equals(Object o) {
+		if (o instanceof Name) {
+			Name name = (Name) o;
+			return getCompleteName().equals(name.getCompleteName());
+		}
+		else {
+			return false;
+		}
+
 	}
 }
