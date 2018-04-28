@@ -1,2 +1,2 @@
 # name-generator
-Java librarry to generate random name from different languages/cultures
+Java library to generate random name from different languages/cultures
