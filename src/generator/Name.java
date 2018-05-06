@@ -7,13 +7,14 @@ public class Name {
 	private boolean male;
 
 	public Name(String firstName, String lastName, String language, boolean male) {
-		this.firstName = firstName;
-		this.lastName = lastName;
 		this.language = language;
 		this.male = male;
 
 		firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();
 		lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1).toLowerCase();
+
+		this.firstName = firstName;
+		this.lastName = lastName;
 	}
 
 	public String getFirstName() {
@@ -25,7 +26,7 @@ public class Name {
 	}
 
 	public String getCompleteName() {
-		return firstName + "" + lastName;
+		return firstName + " " + lastName;
 	}
 
 	public boolean hasComplexFirstName() {
@@ -45,6 +46,7 @@ public class Name {
 	public String toString() {
 		return getCompleteName();
 	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (o instanceof Name) {
