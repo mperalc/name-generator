@@ -4,10 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>groupId</groupId>
+    <groupId>com.mperalc.name-generator</groupId>
     <artifactId>name-generator</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <repositories>
+        <repository>
+            <id>toolbox</id>
+            <name>toolbox</name>
+            <url>https://raw.github.com/pedrovictori/toolbox/repository/</url>
+        </repository>
+    </repositories>
     <build>
         <sourceDirectory>src</sourceDirectory>
         <resources>
@@ -31,21 +37,9 @@
     </build>
     <dependencies>
         <dependency>
-            <groupId>toolbox</groupId>
+            <groupId>com.victori.toolbox</groupId>
             <artifactId>toolbox</artifactId>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/toolbox-1.3.0.jar</systemPath>
+            <version>1.4.0-SNAPSHOT</version>
         </dependency>
-
-
     </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>toolbox</groupId>
-                <artifactId>toolbox</artifactId>
-                <version>1.3.0</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>

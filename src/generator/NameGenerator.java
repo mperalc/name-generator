@@ -46,7 +46,7 @@ public class NameGenerator {
 		}
 
 		TextFile firstNames = new TextFile(firstNameFilename, path);
-		TextFile lastNames = new TextFile("female-first.txt", path);
+		TextFile lastNames = new TextFile("last.txt", path);
 
 
 		if (uniqueNames) {
