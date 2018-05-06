@@ -27,3 +27,17 @@ hs_err_pid*
 name-generator\.iml
 
 \.idea/
+
+target/name-generator-1\.0-SNAPSHOT\.jar
+
+target/classes/res/american/female-first\.txt
+
+target/classes/res/american/last\.txt
+
+target/classes/res/american/male-first\.txt
+
+target/classes/res/spanish/female-first\.txt
+
+target/classes/res/spanish/last\.txt
+
+target/classes/res/spanish/male-first\.txt
