@@ -32,7 +32,7 @@ public class NameGenerator {
 		}
 		List<Name> names;
 		language = language.toLowerCase().trim();
-		File langDir = new File("./res/" + language + "/");
+		File langDir = new File("./src/res/" + language + "/");
 		if (!langDir.isDirectory()) {
 			throw new IllegalArgumentException("Language not found");
 		}
