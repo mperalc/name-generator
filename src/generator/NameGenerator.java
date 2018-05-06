@@ -82,6 +82,15 @@ public class NameGenerator {
 		return names;
 	}
 
+	/**
+	 * Method that generates a list of names of mixed gender.
+	 * @param language language of the names to get.
+	 * @param number total number of names.
+	 * @param uniqueNames true for non-repeated names.
+	 * @param percentMale % of male names.
+	 * @return a List of Names.
+	 * @throws IllegalArgumentException if language file not found or if number < 1
+	 */
 	public static List<Name> generateMixedGenderNames(String language, int number, boolean uniqueNames, int percentMale) throws IllegalArgumentException {
 		int numMale = (int) Math.round((double) ((percentMale * number)/100));
 
